@@ -11,6 +11,7 @@ cmake -G "Ninja" \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DWITH_TESTS=OFF \
   -DWITH_PYTHON=OFF \
+  ${CMAKE_ARGS} \
   ..
 
 cmake --build .
