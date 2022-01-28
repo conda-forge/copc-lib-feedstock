@@ -16,9 +16,11 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
+    - pybind11                               # [build_platform != target_platform]
   host:
     - python
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pip
     - pybind11 >=2.6.0
     - scikit-build
