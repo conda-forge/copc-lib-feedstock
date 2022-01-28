@@ -17,16 +17,15 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cmake >=3.18     # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
+    - cmake >=3.18
+    - ninja
   host:
     - python
     - pip
     - pybind11 >=2.6.0
     - scikit-build
-    - cmake >=3.18
-    - ninja
     - laz-perf =3.0.0
   run:
     - python
