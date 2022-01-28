@@ -4,6 +4,8 @@ REM build test files
 mkdir "test/build"
 cd "test/build"
 
+SET CMAKE_GENERATOR=Ninja
+
 cmake -G "Ninja" ^
   -DCMAKE_BUILD_TYPE=Release ^
   ..
