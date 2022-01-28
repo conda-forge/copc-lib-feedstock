@@ -13,7 +13,7 @@ cmake -G "Ninja" \
   ..
 
 cmake --build .
-ctest
+ctest --output-on-failure
 
 # run python tests
 pytest ..
