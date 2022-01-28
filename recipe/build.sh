@@ -6,6 +6,11 @@ export CMAKE_GENERATOR=Ninja
 mkdir build
 cd build
 
+if [ "$target_platform" = "osx-arm64" ]; then
+  export SKBUILD_CONFIGURE_OPTIONS=${CMAKE_ARGS/CMAKE_INSTALL_PREFIX/CMAKE_INSTALL_PREFIX_BAK}
+  export CMAKE_OSX_ARCHITECTURES="arm64"
+fi
+
 cmake -G "Ninja" \
   -DCMAKE_BUILD_TYPE=Release \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
