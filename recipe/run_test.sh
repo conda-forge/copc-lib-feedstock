@@ -2,13 +2,12 @@
 
 # catch2 uses features only available in osx >=10.12
 export MACOSX_DEPLOYMENT_TARGET="10.12"
-export CMAKE_GENERATOR=Ninja
 
 # build test files
 mkdir "test/build"
 cd "test/build"
 
-cmake -G "Ninja" \
+cmake \
   -DCMAKE_BUILD_TYPE=Release \
   ..
 
@@ -25,7 +24,7 @@ cd $SRC_DIR
 mkdir "example/build"
 cd "example/build"
 
-cmake -G "Ninja" \
+cmake \
   -DCMAKE_BUILD_TYPE=Release \
   ..
 

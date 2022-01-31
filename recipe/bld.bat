@@ -3,9 +3,7 @@
 mkdir build
 cd build
 
-SET CMAKE_GENERATOR=Ninja
-
-cmake -G "Ninja" ^
+cmake ^
   -DCMAKE_BUILD_TYPE=Release ^
   -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
   -DWITH_TESTS=OFF ^
