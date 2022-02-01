@@ -3,7 +3,7 @@
 mkdir build
 cd build
 
-cmake -G "Ninja" ^
+cmake ^
   -DCMAKE_BUILD_TYPE=Release ^
   -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
   -DWITH_TESTS=OFF ^

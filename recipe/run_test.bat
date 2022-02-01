@@ -4,7 +4,7 @@ REM build test files
 mkdir "test/build"
 cd "test/build"
 
-cmake -G "Ninja" ^
+cmake ^
   -DCMAKE_BUILD_TYPE=Release ^
   ..
 if errorlevel 1 exit 1
@@ -29,7 +29,7 @@ mkdir "example/build"
 cd "example/build"
 if errorlevel 1 exit 1
 
-cmake -G "Ninja" ^
+cmake ^
   -DCMAKE_BUILD_TYPE=Release ^
   ..
 if errorlevel 1 exit 1

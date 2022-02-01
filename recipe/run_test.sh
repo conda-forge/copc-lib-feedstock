@@ -7,12 +7,12 @@ export MACOSX_DEPLOYMENT_TARGET="10.12"
 mkdir "test/build"
 cd "test/build"
 
-cmake -G "Ninja" \
+cmake \
   -DCMAKE_BUILD_TYPE=Release \
   ..
 
 cmake --build .
-ctest
+ctest --output-on-failure
 
 # run python tests
 pytest ..
@@ -24,7 +24,7 @@ cd $SRC_DIR
 mkdir "example/build"
 cd "example/build"
 
-cmake -G "Ninja" \
+cmake \
   -DCMAKE_BUILD_TYPE=Release \
   ..
 

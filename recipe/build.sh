@@ -1,16 +1,21 @@
 #!/bin/bash
 
 set -ex
-export CMAKE_GENERATOR=Ninja
 
 mkdir build
 cd build
 
-cmake -G "Ninja" \
+if [ "$target_platform" = "osx-arm64" ]; then
+  export SKBUILD_CONFIGURE_OPTIONS=${CMAKE_ARGS/CMAKE_INSTALL_PREFIX/CMAKE_INSTALL_PREFIX_BAK}
+  export CMAKE_OSX_ARCHITECTURES="arm64"
+fi
+
+cmake \
   -DCMAKE_BUILD_TYPE=Release \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DWITH_TESTS=OFF \
   -DWITH_PYTHON=OFF \
+  ${CMAKE_ARGS} \
   ..
 
 cmake --build .
