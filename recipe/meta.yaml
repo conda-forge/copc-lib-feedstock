@@ -1,5 +1,5 @@
 {% set name = "copc-lib" %}
-{% set version = "2.2.2" %}
+{% set version = "2.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/RockRobotic/copc-lib/archive/v{{ version }}.tar.gz
-  sha256: 6b3ca2c98094e70353f89c32ab8be2b09920c53da69773e4e58c9dda2c465e29
+  sha256: 686318300020ba56d268836b66ce3726801d88350dcb3b225c69643ade7c2f98
 
 build:
-  number: 1
-  skip: True  # [py<36]
+  number: 0
+  skip: true  # [py<36]
 
 requirements:
   build:
@@ -55,7 +55,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
-  summary: 'copc-lib provides an easy-to-use interface for reading and creating Cloud Optimized Point Clouds'
+  summary: copc-lib provides an easy-to-use interface for reading and creating Cloud Optimized Point Clouds
 
 extra:
   recipe-maintainers:
