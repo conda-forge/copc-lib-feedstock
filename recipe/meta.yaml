@@ -46,7 +46,7 @@ test:
     - example/*.py
   requires:
     - pytest
-    - Catch2
+    - Catch2<3
     - {{ compiler('cxx') }}
     - make
     - cmake >=3.18
