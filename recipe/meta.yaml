@@ -31,6 +31,7 @@ requirements:
   run:
     - python
     - laz-perf =3.0.0
+    - numpy
 
 test:
   imports:
