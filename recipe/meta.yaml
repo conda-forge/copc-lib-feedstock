@@ -21,13 +21,13 @@ requirements:
     - pybind11                               # [build_platform != target_platform]
     - make
     - cmake >=3.18
-    - mypy
   host:
     - python
     - pip
     - pybind11 >=2.6.0
     - scikit-build
     - laz-perf =3.0.0
+    - mypy
   run:
     - python
     - laz-perf =3.0.0
