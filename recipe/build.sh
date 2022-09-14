@@ -15,6 +15,7 @@ cmake \
   -DCMAKE_INSTALL_PREFIX=$PREFIX \
   -DWITH_TESTS=OFF \
   -DWITH_PYTHON=OFF \
+  -G Ninja \
   ${CMAKE_ARGS} \
   ..
 
