@@ -10,12 +10,13 @@ source:
   sha256: 754e69abf95ca0c0953779c64f2652146f121ce4c8d8635a12f8c01502539457
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36 or (win and py>39)]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
