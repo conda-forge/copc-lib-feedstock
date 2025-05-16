@@ -337,7 +337,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@CCInc](https://github.com/CCInc/)
 * [@arknoll](https://github.com/arknoll/)
+* [@clee-ai](https://github.com/clee-ai/)
 * [@leo-stan](https://github.com/leo-stan/)
 
