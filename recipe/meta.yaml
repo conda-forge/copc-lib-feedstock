@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
+    - pybind11-abi                           # [build_platform != target_platform]
     - make
     - cmake >=3.18
   host:
@@ -26,6 +27,7 @@ requirements:
     - pip
     - setuptools
     - pybind11 >=2.6.0
+    - pybind11-abi
     - scikit-build
     - laz-perf >=3.0.0
     - mypy
