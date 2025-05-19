@@ -19,7 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
-    - make
+    - ninja
     - cmake >=3.18
   host:
     - python
@@ -27,11 +27,11 @@ requirements:
     - setuptools
     - pybind11 >=2.6.0
     - scikit-build
-    - laz-perf =3.0.0
+    - laz-perf >=3.0.0
     - mypy
   run:
     - python
-    - laz-perf =3.0.0
+    - laz-perf >=3.0.0
     - numpy
 
 test:
@@ -50,7 +50,8 @@ test:
     - pytest
     - Catch2 2.*
     - {{ compiler('cxx') }}
-    - make
+    - {{ stdlib("c") }}
+    - ninja
     - cmake >=3.18
 
 about:
