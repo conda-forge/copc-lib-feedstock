@@ -1,5 +1,5 @@
 {% set name = "copc-lib" %}
-{% set version = "2.6.2" %}
+{% set version = "2.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/RockRobotic/copc-lib/archive/v{{ version }}.tar.gz
-  sha256: f04434f76e458553cb1bf20362fade61ff30b014f69191430be72ce9adb92435
+  sha256: 6ab9c071f1ca863d902a9ee05021c393f2c4cd29e4bc1c154c606e50ab04d4fa
 
 build:
   number: 0
