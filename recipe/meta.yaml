@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/RockRobotic/copc-lib/archive/v{{ version }}.tar.gz
-  sha256: f04434f76e458553cb1bf20362fade61ff30b014f69191430be72ce9adb92435
+  git_url: https://github.com/RockRobotic/copc-lib.git
+  git_rev: cf5fc58b83e5e1252f058af30b6cb1e1f3c88a45
 
 build:
   number: 1
