@@ -4,6 +4,10 @@
 mkdir "test/build"
 cd "test/build"
 
+# these cause problems downloading test files sometimes on OSX
+export CMAKE_TLS_VERIFY=0
+export CMAKE_TLS_VERSION=1.0
+
 cmake \
   -DCMAKE_BUILD_TYPE=Release \
   ${CMAKE_ARGS} \
