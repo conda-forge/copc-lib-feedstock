@@ -1,5 +1,5 @@
 {% set name = "copc-lib" %}
-{% set version = "2.5.3" %}
+{% set version = "2.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,30 +7,33 @@ package:
 
 source:
   url: https://github.com/RockRobotic/copc-lib/archive/v{{ version }}.tar.gz
-  sha256: 754e69abf95ca0c0953779c64f2652146f121ce4c8d8635a12f8c01502539457
+  sha256: f04434f76e458553cb1bf20362fade61ff30b014f69191430be72ce9adb92435
 
 build:
-  number: 1
-  skip: true  # [py<36 or (win and py>39)]
+  number: 0
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - python                                 # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
+    - pybind11-abi                           # [build_platform != target_platform]
     - make
     - cmake >=3.18
   host:
     - python
     - pip
+    - setuptools
     - pybind11 >=2.6.0
+    - pybind11-abi
     - scikit-build
-    - laz-perf =3.0.0
+    - laz-perf >=3.0.0
     - mypy
   run:
     - python
-    - laz-perf =3.0.0
+    - laz-perf >=3.0.0
     - numpy
 
 test:
@@ -47,8 +50,9 @@ test:
     - example/*.py
   requires:
     - pytest
-    - Catch2<3
+    - Catch2 2.*
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make
     - cmake >=3.18
 
@@ -61,6 +65,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - CCInc
+    - clee-ai
     - leo-stan
     - arknoll

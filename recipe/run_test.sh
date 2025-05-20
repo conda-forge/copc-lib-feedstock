@@ -1,14 +1,12 @@
 #!/bin/bash
 
-# catch2 uses features only available in osx >=10.12
-export MACOSX_DEPLOYMENT_TARGET="10.12"
-
 # build test files
 mkdir "test/build"
 cd "test/build"
 
 cmake \
   -DCMAKE_BUILD_TYPE=Release \
+  ${CMAKE_ARGS} \
   ..
 
 cmake --build .
@@ -26,6 +24,7 @@ cd "example/build"
 
 cmake \
   -DCMAKE_BUILD_TYPE=Release \
+  ${CMAKE_ARGS} \
   ..
 
 cmake --build .
