@@ -1,9 +1,9 @@
+DOCKER_PLATFORM:
+- linux/ppc64le
 c_stdlib:
 - sysroot
 c_stdlib_version:
 - '2.17'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,19 +11,16 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '14'
+- '15'
 docker_image:
-- quay.io/condaforge/linux-anvil-ppc64le:alma9
+- quay.io/condaforge/linux-anvil-ppc64le:alma10
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 pybind11_abi:
-- '4'
+- '12'
 python:
 - 3.12.* *_cpython
 target_platform:
 - linux-ppc64le
-zip_keys:
-- - python
-  - channel_sources
